@@ -18,10 +18,26 @@ Here is my first app for a part of a big taxi application.
 - In Controller-package I have logic how we can get app on web-site.
 - Filter is responsible for the permission for logged Driver to add data to DB.
 
+### Project technologies
+- Java: Java Core, Java 8, OOP, Collections, JDBC;
+- Database: MySQL;
+- Tools: Maven, IntelliJ IDEA;
+
 ### How to start this app?
 For start up the application fork this project.
 
+Install IntelliJ IDEA and Tomcat version 9.0.71, MySQL Workbench.
+
+In util package, in ConnectionUtil.Class you have to fill your URL to local host, name of localhost and password, JDBC_DRIVER.
+
 To get the actual parameters of the database tables, run script from the resources/init_db.sql file in the Workbench.
+
+After you have installed tomcat you should edit configurations in Idea. Please, add new configuration: TomcatServer -> Local.
+In application server choose Tomcat that you have installed. Fill URL with http://localhost:8080/, HTTP port 8080.
+In deployment select taxi-service:war exploded. In application context leave one slash "/". Apply changes.
+![img.png](img.png)
+
+Now you can run tomcat.
 
 To create new Driver, please, link [here](http://localhost:8080/login).
 
